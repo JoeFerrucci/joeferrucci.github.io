@@ -1,59 +1,175 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Portfolio | Joe Ferrucci</title>
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
-<link href="http://fonts.googleapis.com/css?family=Poppins" media="screen" rel="stylesheet" type="text/css" />
-
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Joe Ferrucci</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" media="screen" rel="stylesheet" type="text/css" />
+    <style>
     body {
-      font-family: Poppins, Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-      background: #FBFBFF;
+        font-family: Poppins, Menlo, Courier New, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 0;
+        background-color: #FBFBFF;
+        color: ##313131;
     }
-    .hidden {
-      display: none;
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
     }
-    #error {
-      color: red;
-      margin-top: 10px;
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
     }
-  </style>
+
+    header p {
+        margin: 5px 0;
+    }
+
+    section {
+        background: #fff;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2,
+    h3 {
+        color: #313131;
+        margin-top: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #555;
+    }
+    </style>
 </head>
+
 <body>
-  <h1>Here is my resume</h1>
-  <p>The password is 'showme' without quotes. Enter the password to access it:</p>
-  <form id="passwordForm">
-    <input type="password" id="password" placeholder="Enter password" required>
-    <button type="submit">Go</button>
-  </form>
-  <p id="error" class="hidden">Incorrect password. Please try again.</p>
-  <p id="resumeLink" class="hidden">
-    <a href="https://www.github.com/joeferrucci/joeferrucci.github.io/jf.pdf" target="_blank">View Resume</a>
-  </p>
-
-  <script>
-    const passwordForm = document.getElementById('passwordForm');
-    const passwordInput = document.getElementById('password');
-    const errorText = document.getElementById('error');
-    const resumeLink = document.getElementById('resumeLink');
-
-    passwordForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const password = passwordInput.value;
-
-      if (password === 'showme') {
-        errorText.classList.add('hidden');
-        resumeLink.classList.remove('hidden');
-      } else {
-        errorText.classList.remove('hidden');
-        resumeLink.classList.add('hidden');
-      }
-    });
-  </script>
+    <header>
+        <h1>Joe Ferrucci</h1>
+        <p>iOS Engineer, Technical Leader, Founder</p>
+        <p>Contact: <span>reach out to me on <a href='https://www.linkedin.com/in/joeferrucci/'>LinkedIn</a> or on <a href='https://onbunches.com/joe/'>Bunches @joe</a></span></p>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <p>
+            Passionate iOS Engineer with extensive experience in building high-quality, scalable applications and leading
+            engineering teams. Strong expertise in Swift, Objective-C, and backend technologies such as Go, Ruby, and Elixir.
+            Experience in leading large-scale engineering projects, developing and releasing iOS applications using
+            Objective-C and Swift, driving developer productivity, and delivering high-quality, performant user experiences.
+        </p>
+    </section>
+    <section>
+        <h2>Education</h2>
+        <p><strong>University of California, Davis</strong> — M.S/B.S. Computer Science, Statistics</p>
+    </section>
+    <section>
+        <h2>Experience</h2>
+        <article>
+            <h3>Bunches: Chat Sports (2020 - Present)</h3>
+            <p><strong>iOS Engineer / Founding Engineer</strong></p>
+            <ul>
+                <li>Built and scaled the iOS app, focusing on delivering high-quality user experiences and robust core features.</li>
+                <li>Grew the engineering team from 1 to 5 members across backend and frontend, focusing on infrastructure and developer productivity.</li>
+                <li>Led cross-functional collaborations to identify opportunities for boosting developer productivity.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Instacart (2019 - 2021)</h3>
+            <p><strong>iOS Engineer, Staff</strong></p>
+            <ul>
+                <li>Led projects within the In-Store Fulfillment and Earnings/Marketplace teams, working extensively with Swift and Objective-C.</li>
+                <li>Championed platform-wide projects aimed at improving app performance, code quality, and developer experience.</li>
+                <li>Collaborated across multiple teams, including Logistics, Growth, and Staffing, to deliver impactful cross-functional initiatives.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Monster.com (2017 - 2019)</h3>
+            <p><strong>Lead Engineer, Technical Head of Engineering</strong></p>
+            <ul>
+                <li>Directed development for all client applications (iOS, Android, Web), ensuring consistency and high quality across platforms.</li>
+                <li>Established development policies and best practices for the entire engineering org, driving code quality and team productivity.</li>
+                <li>Initially built the original iOS app as the sole iOS engineer, focusing on scalable architecture and high-quality UX.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Jobr (Acquired by Monster.com) (2015 - 2017)</h3>
+            <p><strong>Principal iOS Engineer</strong></p>
+            <ul>
+                <li>Sole iOS engineer for two apps—Jobr and Jobr for Business—built from scratch in Swift.</li>
+                <li>Ensured consistent high App Store ratings (#1 in Business section) by insisting on high standards of quality and performance.</li>
+                <li>Worked with multiple stakeholders to enhance features and improve overall user engagement.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Foodster: Food Delivery (2014 - 2015)</h3>
+            <p><strong>Lead Engineer, Co-Founder</strong></p>
+            <ul>
+                <li>Built the food delivery app from the ground up, including iOS, web clients, and backend infrastructure.</li>
+                <li>Focused on clean code, scalability, and fast iteration to bring the product to market efficiently.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>NASA JPL (Jet Propulsion Laboratory) (2014 - 2015)</h3>
+            <p><strong>Full Stack Engineer, Lead</strong></p>
+            <ul>
+                <li>Worked on the Earth Observing System (EOS) team, contributing to large-scale data processing and analysis.</li>
+                <li>Collaborated with scientists and engineers to develop full-stack solutions, gaining experience in handling complex requirements and large datasets.</li>
+                <li>Utilized strong problem-solving skills to address challenges in data collection and management.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>ProjectX (2011 - 2014)</h3>
+            <p><strong>Head Engineer</strong></p>
+            <ul>
+                <li>Freelanced as a general engineer with a focus on iOS and backend development.</li>
+                <li>Designed and implemented scalable iOS applications, along with backend services, enhancing client productivity.</li>
+                <li>Gained experience in quickly adapting to different project requirements and working in a self-directed environment.</li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>iOS Development:</strong> Swift, Objective-C, SwiftUI, Texture, Combine, Rx, TCA, Xcode, SQLite, Realm, GRDB, CoreData.</li>
+            <li><strong>Backend:</strong> Go, Ruby, Elixir, Python, Postgres, Firebase, REST API, GraphQL, gRPC, MongoDB.</li>
+            <li><strong>Team Leadership:</strong> Mentoring junior engineers, leading teams, scaling engineering operations, executive leadership.</li>
+            <li><strong>Project Management:</strong> Leading large-scale projects involving cross-functional teams and stakeholders.</li>
+            <li><strong>Cloud Technologies:</strong> AWS, EC2, SNS, EKS, Google Cloud, Apollo, GraphQL.</li>
+            <li><strong>Technical Communication:</strong> Preparing, presenting, and revising complex technical specifications, designs, and data analysis.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Additional Skills</h2>
+        <ul>
+            <li>Deep familiarity with UI design, algorithms, and database schema design.</li>
+            <li>Experience in mentoring engineers and leading technical teams.</li>
+            <li>Strong foundation in scalable app architecture and ensuring top-notch app performance and quality.</li>
+            <li>Conducting code reviews, establishing coding standards, and driving continuous improvement within the team.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Joe Ferrucci</p>
+    </footer>
 </body>
+
 </html>
